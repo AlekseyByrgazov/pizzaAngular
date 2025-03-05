@@ -1,0 +1,17 @@
+<h2 class="titleBrown">{{titles[0]}}</h2>
+<h3 class="titleYellow">{{titles[1] ? titles[1] : ''}}</h3>
+<div class="content">
+    @if (isString(content)) {
+        <div>{{content}}</div>
+    }
+
+    @else {
+        <div class="container">
+            @for (item of content; track item) {
+              <app-advantage [content]="item"></app-advantage>
+            }
+        </div>
+    }
+</div>
+
+

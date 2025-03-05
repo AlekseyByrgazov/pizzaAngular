@@ -1,0 +1,10 @@
+<header class="header">
+    <div class="wrapper">
+        <img [src]="logoSrc" type="image/png" alt="logo">
+        <nav class="menu">
+            @for(item of navigationItems; track item) {
+                <li><a class='menuItem' href="#">{{item}}</a></li>
+            }
+        </nav>
+    </div>
+</header>
