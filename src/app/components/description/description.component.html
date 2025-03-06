@@ -1,17 +1,20 @@
-<h2 class="titleBrown">{{titles[0]}}</h2>
-<h3 class="titleYellow">{{titles[1] ? titles[1] : ''}}</h3>
+<h2 class="titleBrown" [ngClass]="{'large-bold': !isBaseItemCardArray()}">{{titles[0]}}</h2>
+<h2 class="titleYellow" [ngClass]="{'large-bold': !isBaseItemCardArray()}">{{titles[1] ? titles[1] : ''}}</h2>
 <div class="content">
     @if (isString(content)) {
-        <div>{{content}}</div>
-    }
-
-    @else {
-        <div class="container">
-            @for (item of content; track item) {
-              <app-advantage [content]="item"></app-advantage>
+        <div class="text">{{content}}</div>
+    } @else {
+        @for (item of content; track item) {
+            @if (isPizzaCard(item)) {
+                    <app-pizza-card [content]="item"></app-pizza-card>
+            } @else {
+                    <app-advantage [content]="item"></app-advantage>
             }
-        </div>
+        }
     }
 </div>
+
+
+
 
 

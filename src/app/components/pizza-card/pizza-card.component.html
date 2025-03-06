@@ -1,0 +1,13 @@
+<div class="pizzaCard">
+    <img [src]="content.ImgSrc" alt="pizza" (click)="openImage(content.ImgSrc)">
+    <h3>{{content.Title}}</h3>
+    <div class="description">{{content.Description}}</div>
+    <button>{{content.ButtonTittle}}</button>
+</div>
+
+
+@if(selectedImageUrl){
+    <div class="modal" (click)="closeImage()">
+        <img [src]="selectedImageUrl" alt="Image" class="modal-image" />
+    </div>
+  }

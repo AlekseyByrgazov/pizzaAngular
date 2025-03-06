@@ -3,12 +3,23 @@ enum BlocksInSite {
     ChoosePizza = 'ChoosePizza',
     FormGroup = 'FormGroup'
 }
-
 export type PizzaTitles = Record<BlocksInSite, string[]>
 
-enum BlockOfAdvantages {
+
+enum BaseItemKeys {
     ImgSrc = 'ImgSrc',
     Title = 'Title',
     Description = 'Description'
 }
-export type BlockOfAdvantage = Record<BlockOfAdvantages, string>
+export type BaseItemCard = Record<BaseItemKeys, string>
+
+export type PizzaCard = BaseItemCard & {
+    ButtonTittle: string
+}
+export type ItemCard = BaseItemCard | PizzaCard
+
+export interface UserInfo{
+    name: string,
+    address: string,
+    phone: string
+}

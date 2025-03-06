@@ -1,0 +1,43 @@
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+    <div>
+      <input id="name" formControlName="name" (keydown)="filterInput($event)" placeholder="Ваше имя"/>
+      @if(orderForm.get('name')?.invalid && orderForm.get('name')?.touched){<div>
+        @if(orderForm.get('name')?.errors?.['required']){
+            <small>Имя обязательно</small>
+        }
+        @if(orderForm.get('name')?.errors?.['pattern']){<small>Допустимы только буквы кириллицей</small>}
+      </div>}
+    </div>
+
+    <div>
+      <input id="address" formControlName="address"  placeholder="Ваш адрес"/>
+      @if(orderForm.get('address')?.invalid && orderForm.get('address')?.touched){<div>
+        <small>Адрес обязателен.</small>
+      </div>}
+    </div>
+
+    <div>
+      <input id="phone" formControlName="phone"  placeholder="Телефон"/>
+      @if(orderForm.get('phone')?.invalid && orderForm.get('phone')?.touched) {
+        <div>
+           @if(orderForm.get('phone')?.errors?.['required']){
+            <small>Телефон обязателен</small>
+        }
+            @if(orderForm.get('phone')?.errors?.['pattern']){
+                <small>Телефон должен содержать только цифры.</small>
+            }
+        </div>
+    }
+    </div>
+
+    <button type="submit" [disabled]="orderForm.invalid" [ngClass]="{'disabled-button': orderForm.invalid}">Оформить заказ</button>
+  </form>
+
+@if (showPopup) {
+    <div class="popup">
+      <div class="popup-content">
+        <span (click)="closePopup()" class="close">&times;</span>
+        <p>Спасибо за заказ!</p>
+      </div>
+    </div>
+}

@@ -1,0 +1,29 @@
+.titleBrown {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  color: rgb(185, 145, 80);
+}
+
+.titleYellow{
+    color: rgb(255, 175, 24)
+}
+
+.large-bold {
+  text-align: start;
+  font-size: 2em;
+  font-weight: 1000
+}
+
+.content{
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.text {
+  color: rgb(185, 145, 80);
+  width: 330px;
+}

@@ -1,16 +1,26 @@
 <div class="advantages">
     <div class="left-block">
-        <app-description [titles]="titles.Advantages" [content]="contentForAdvantages"></app-description>
-        <button>Выбрать пиццу</button>
+        <div class="advantages-cards">
+            <app-description [titles]="titles.Advantages" [content]="contentForAdvantages"></app-description>
+        </div>
+        <button class="button">Выбрать пиццу</button>
     </div>
     <div class="right-block">
-        <img [src]="'./assets/img/bacon-and-grill.png'" alt="">
+        <img class="img" [src]="'./assets/img/pizza_big.png'" alt="">
     </div>
 </div>
 <div class="choose-pizza">
-    
+    <app-description [titles]="titles.ChoosePizza" [content]="contentForPizzaCards"></app-description>
 </div>
 <div class="form-group">
-    <app-description [titles]="titles.FormGroup" [content]="contentForFormGroup"></app-description>
+    <div class="left-block">
+        <app-description [titles]="titles.FormGroup" [content]="contentForFormGroup"></app-description>
+    </div>
+    <div class="right-block">
+        <app-order-form></app-order-form>
+    </div>
+    <div class="image-container">
+        <img class="responsive-img" [src]="'./assets/img/pizzzzza.png'" alt="">
+    </div>
 </div>
 

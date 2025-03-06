@@ -1,0 +1,22 @@
+.advantage {
+    display: flex;
+    gap: 15px;
+}
+
+.title {
+    color: rgb(255, 175, 24);
+}
+
+.description {
+    max-width: 200px;
+}
+
+.img{
+    width: 60px;
+    height: 60px;
+}
+
+.text {
+    color: rgb(185, 145, 80);
+    font-size: 0.8em;
+}
