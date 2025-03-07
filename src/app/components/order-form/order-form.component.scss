@@ -62,3 +62,9 @@ button {
   cursor: pointer;
   float: right;
 }
+
+@media (max-width: 1000px) {
+  :host {
+    margin-top: 30px;
+  }
+}

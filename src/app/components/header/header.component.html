@@ -6,5 +6,15 @@
                 <li><a class='menuItem' href="#">{{item}}</a></li>
             }
         </nav>
+
+        <div class="menu-burger">
+            <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+            <label for="burger-checkbox" class="burger"></label>
+            <ul class="menu-list">
+                @for(item of navigationItems; track item) {
+                    <li><a class='menuItem' href="#">{{item}}</a></li>
+                }
+            </ul>
+        </div>
     </div>
 </header>

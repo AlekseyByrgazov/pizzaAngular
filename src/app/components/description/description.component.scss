@@ -27,3 +27,12 @@
   color: rgb(185, 145, 80);
   width: 330px;
 }
+
+@media (max-width:1000px) {
+  .large-bold {
+    text-align: center;
+  }
+  .content {
+    justify-content: center;
+  }
+}

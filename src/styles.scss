@@ -2,7 +2,7 @@
     font-family: 'Muller';
     src: url('../src/assets/fonts/muller.ttf');
 }
-html, body, h1,h2,h3,h4,h5,h6 {
+html, body, h1,h2,h3,h4,h5,h6,ul {
     margin: 0;
     padding: 0;
     font-family: 'Muller';
@@ -10,3 +10,6 @@ html, body, h1,h2,h3,h4,h5,h6 {
 a {
     text-decoration: none;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
